@@ -44,6 +44,7 @@ public class CicloFor {
       int numVarones = 0;
       int numMujeres = 0;
       char seleccion = '1';
+      double porcentaje =0;
       
       for (int i =0; i<NUMEROVOTANTES;  i++){
           System.out.println("Genero de votante");
@@ -65,7 +66,18 @@ public class CicloFor {
                 
         } 
       } 
+       porcentaje = (double)numVarones / NUMEROVOTANTES;// casting transformar variable int a double, (double)
+        System.out.printf("Varones: %.2f %% \n",porcentaje*100);
         
+        porcentaje = (double)numMujeres / NUMEROVOTANTES;
+        System.out.printf("Mujeres: %.2f %% \n",porcentaje*100);
+        
+        if(numVarones>numMujeres){
+            System.out.println("El mayor numero de votantes fueron Hombres");
+        }
+        if(numMujeres>numVarones){
+            System.out.println("El mayor numero de votantes fueron Mujeres");
+        }
         
     }//fin del main 
     
